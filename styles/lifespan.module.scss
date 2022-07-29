@@ -1,0 +1,43 @@
+$years: 1991, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2022;
+
+@mixin random-clr() {
+  background-color: rgb(random(255), random(255), random(255));
+}
+
+.lifespan {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 100%;
+  height: 80vh;
+  box-shadow: inset 0px 0px 50px 17px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .valueBar {
+    position: relative;
+    margin-top: 6rem;
+  }
+
+  .tickStyles {
+    margin-top: 2rem;
+    margin-left: -1.2rem;
+
+    .tick_mark {
+      margin-left: 1.075rem;
+      margin-bottom: 0.75rem;
+      width: 4px;
+      height: 1rem;
+      background-color: white;
+    }
+
+    // @each $year in $years {
+    //   .y#{$year} {
+    //     width: 12%;
+    //     height: 4rem;
+    //     background-color: random-clr();
+    //   }
+    // }
+  }
+}
